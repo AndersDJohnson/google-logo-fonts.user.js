@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Google Logo Fonts
 // @namespace    https://github.com/AndersDJohnson/
-// @version      1.0.0
+// @version      1.1.0
 // @downloadURL  https://github.com/AndersDJohnson/google-logo-fonts.user.js/raw/master/src/js/google-logo-fonts.user.js
 // @description  Switch Google's logo to random fonts from Google Fonts API.
 // @author       Anders D. Johnson
@@ -31,19 +31,23 @@ var getFonts = function () {
     })
 };
 
-var loadFont = function (name) {
-    var $link = $('<link>', {
-        href: 'https://fonts.googleapis.com/css?family=' + name,
-        rel: 'stylesheet',
-        type: 'text/css'
-    });
-
-    $(document.body).append($link);
-};
-
 $(function () {
+    var $body = $(document.body);
+
+    var loadFont = function (name) {
+        var $link = $('<link>', {
+            href: 'https://fonts.googleapis.com/css?family=' + name,
+            rel: 'stylesheet',
+            type: 'text/css'
+        });
+
+        $body.append($link);
+    };
+
     var $logo = $('#hplogo');
     $logo.hide();
+    
+    $body.append('<style>.wf-inactive #hplogo { display: block !important; }</style>');
 
     var $par = $logo.parent();
 
@@ -70,17 +74,13 @@ $(function () {
     });
 
     var activate = function () {
-        $logo.replaceWith($new);
+        $logo.after($new);
         $par.css({
             position: 'relative' 
         });
     };
-
-    getFonts()
-    .then(function (fonts) {
-        var font = random(fonts);
-        //console.log('font', font);
-
+    
+    var applyFont = function (font) {
         WebFont.load({
             google: {
                 families: [font]
@@ -90,6 +90,21 @@ $(function () {
                 activate();
             }
         });
-    });
+    };
+
+    var match = window.location.search.match(/[\?&]?font=([^&]*)/);
+    var qfont = match ? match[1] : null;
+
+    if (qfont) {
+        qfont = decodeURIComponent(qfont);
+        applyFont(qfont);
+    }
+    else {
+        getFonts()
+        .then(function (fonts) {
+            var font = random(fonts);
+            applyFont(font);
+        });
+    }
 
 });

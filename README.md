@@ -10,7 +10,7 @@ First [install](#install). Then just open up https://google.com, and you'll see 
 
 To see what font has loaded, and get a URL to share to it, see the "Google Logo Font" message in the console log.
 
-Example share URL:https://www.google.com/?font=Lily%20Script%20One
+Example share URL: https://www.google.com/?font=Lily%20Script%20One
 
 ## Install
 

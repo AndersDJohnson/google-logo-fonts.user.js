@@ -1,6 +1,10 @@
 # google-logo-fonts.user.js
 Switch Google's logo to random font from Google Fonts API.
 
+## Usage
+
+First [install](#install). Then just open up https://google.com, and you'll see the logo change to a new font each time.
+
 
 ## Install
 
@@ -20,10 +24,6 @@ See [Chromium User Scripts]. Have not tested.
 #### GreaseMonkey
 
 See [GreaseMonkey]. Have not tested.
-
-## Usage
-
-Just open up [https://google.com]. You'll see the logo change to a new font each time.
 
 
 [Tampermonkey]: https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en

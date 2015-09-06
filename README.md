@@ -1,6 +1,8 @@
 # google-logo-fonts.user.js
 Switch Google's logo to random fonts from Google Fonts API.
 
+![image](image.png)
+
 ## Usage
 
 First [install](#install). Then just open up https://google.com, and you'll see the logo change to a new font each time.

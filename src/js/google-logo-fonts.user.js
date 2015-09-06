@@ -8,6 +8,8 @@
 // @author       Anders D. Johnson
 // @copyright    2015+, Anders D. Johnson
 // @match        https://www.google.com/*
+// @include      about:blank
+// @include      about:newtab
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js
 // @require      https://raw.githubusercontent.com/typekit/webfontloader/master/webfontloader.js
 // @grant        GM_xmlhttpRequest 

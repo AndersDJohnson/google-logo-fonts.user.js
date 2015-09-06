@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Google Logo Fonts
 // @namespace    https://github.com/AndersDJohnson/
-// @version      1.1.4
+// @version      1.1.5
 // @downloadURL  https://github.com/AndersDJohnson/google-logo-fonts.user.js/raw/master/src/js/google-logo-fonts.user.js
 // @updateURL    https://github.com/AndersDJohnson/google-logo-fonts.user.js/raw/master/src/js/google-logo-fonts.user.js
 // @description  Switch Google's logo to random fonts from Google Fonts API.
@@ -9,7 +9,6 @@
 // @copyright    2015+, Anders D. Johnson
 // @match        https://www.google.com/*
 // @include      about:blank
-// @include      about:newtab
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js
 // @require      https://raw.githubusercontent.com/typekit/webfontloader/master/webfontloader.js
 // @grant        GM_xmlhttpRequest 

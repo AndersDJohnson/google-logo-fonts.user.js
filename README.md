@@ -2,10 +2,13 @@
 Switch Google's logo to random fonts from Google Fonts API.
 
 ![image](image.png)
+(from https://www.google.com/?font=Lily%20Script%20One)
 
 ## Usage
 
 First [install](#install). Then just open up https://google.com, and you'll see the logo change to a new font each time.
+
+To see what font has loaded, and get a URL to share, see log in the developer console.
 
 
 ## Install

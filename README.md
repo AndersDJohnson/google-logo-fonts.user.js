@@ -12,7 +12,7 @@ First [install](#install). Then just open up https://google.com, and you'll see 
 
 #### TamperMonkey
 1. Install [Tampermonkey] Chrome extension.
-2. Open script URL in Chrome: https://github.com/AndersDJohnson/github-markdown-preview.user.js/raw/master/src/js/github-markdown-preview.user.js
+2. Open script URL in Chrome: https://github.com/AndersDJohnson/google-load-fonts.user.js/raw/master/src/js/google-load-fonts.user.js
 3. Should see Tampermonkey page. Choose "Install" button.
 
 #### Native
